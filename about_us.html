@@ -23,18 +23,57 @@
         
         <nav>
             <img src="RECIPESEARCH icon.png" class="logo" style="width:290px;height:45px;">
-            
-
             <ul>
                 <li><a href="#" class="aboutus">ABOUT</a></li>
                 <li><a href="#" class="contactus">CONTACT US</a></li>
                 <button type="button" class="login btn btn-success">Login</button>
                 <img src="search-icon.png" alt="" width="40" height="40" class="search-icon">
-                
-                
                 <button class="sidebar-toggle" onclick="openNav()">&#9776;</button>
                 <a href="#menu" id="toggle"><span></span></a>
-
-            
             </ul>
         </nav>
+
+       <div class="aboutuscontent">
+            <h2>About Us</h2>
+            <p> Welcome to RecipeSearch, your go-to online recipe finder! We are a team of passionate foodies who love nothing more than creating and sharing delicious recipes with others. Our mission is to make it easy and fun for you to discover new and exciting recipes that you'll love. Whether you're a seasoned chef or a novice in the kitchen, our site has something for everyone. From quick and easy meals to gourmet feasts, we have a wide range of recipes to suit any taste or occasion. So why not join our community of food lovers today and start exploring the world of RecipeSearch? </p>
+
+       </div>
+
+        <div class="footer" style="background-color: #f0f0f0;">
+            <div class="footer_menu">
+              <div class="col_1">
+                <ul>
+                  <img src="RECIPESEARCH icon-fotor-bg-remover-2023042417244.png" alt="" style="width:290px;height:45px;">
+                </ul>
+                <p class="footerdescription">We believe that cooking should be a fun and creative activity, and we're <br> committed to providing our users with the resources and support they need <br> to unleash their culinary creativity.</p>
+              </div>
+              <div class="col_2">
+                <ul>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">Disclaimer</a></li>
+                  <li><a href="#"></a></li>
+                </ul>
+              </div>
+              <div class="col_3">
+                <ul>
+                  <li><a href="#">FAQ</a></li>
+                </ul>
+              </div>
+              <p></p>
+            </div>
+          </div>
+
+
+          <script>
+            function openNav() {
+                document.getElementById("sidebar").style.width = "250px";
+                document.getElementById("hero").style.marginLeft = "250px";
+            }
+        
+            function closeNav() {
+                document.getElementById("sidebar").style.width = "0";
+                document.getElementById("hero").style.marginLeft = "0";
+            }
+            </script>
+</body>
