@@ -30,47 +30,7 @@ body{
       cursor: pointer;
   }
   
-  nav ul li {
-      display: inline-block;
-      list-style: none;
-      margin: 10px 20px;
-  }
-  
-  nav ul li a{
-      text-decoration: none;
-      color: #000;
-      font-weight: bold;
-  }
-  
-  nav ul li a:hover{
-      color: red;
-  }
-  
-  .detel{
-      margin-left: 8%;
-      margin-top: 14%;
-  }
-  
-  .detel h1{
-      font-size: 60px;
-      color: #212121;
-      margin-bottom: 10px;
-  }
-  .detel p{
-      font-size: 20px;
-      margin-bottom: 10px;
-  }
-  
-  span{
-      color: orange;
-      
-  }
-  
-  
-  .detel p{
-      color: #555;
-      line-height: 22px;
-  }
+
   
   .detel a{
       background: #5d9943;
@@ -83,53 +43,7 @@ body{
       border-radius: 5px;
   }
   
-  .food1 {
-      position: absolute;
-      left: 1087px;
-      top: 146px;
-    }
-  
-  .food2 {
-      position: absolute;
-      left: 1351px;
-      top: 205px;
-    }
-  
-  .food3 {
-      position: absolute;
-      left: 1108px;
-      top: 375px;
-    }
-   
-  .food4 {
-      position: absolute;
-      left: 1031px;
-      top: 600px;
-    }  
-  
-  .food5 {
-      position: absolute;
-      left: 1351px;
-      top: 430px;
-    } 
-  
-  .food6 {
-      position: absolute;
-      left: 851px;
-      top: 390px;
-    } 
-  
-  .food7 {
-      position: absolute;
-      left: 1290px;
-      top: 655px;
-    } 
-  
-  .food8 {
-      position: absolute;
-      left: 850px;
-      top: 165px;
-    } 
+
   
   .aboutus{
   position: absolute;
@@ -179,6 +93,10 @@ body{
     
     .footer{
        background: #fff;
+       position: fixed;
+       bottom: 0;
+       left: 0;
+       width: 2000px;
        padding: 50px;
     }
     
@@ -354,7 +272,10 @@ body{
   
   }
   
-  
+  .aboutuscontent {
+    margin-top:5%;
+    text-align: center;
+  }
   
   
   
