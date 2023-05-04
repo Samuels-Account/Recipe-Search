@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Settings</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.0/css/bootstrap.min.css">
+  <style>
+    body {
+      padding-top: 60px; /* set the top padding equal to the height of the navbar */
+      
+    }
+    .sidebar {
+      position: fixed;
+      top: 60px; /* set the top position equal to the height of the navbar */
+      left: 0;
+      width: 250px;
+      height: 100%;
+      padding: 1px;
+      background-color: #f8f9fa;
+      border: 1px solid black;
+
+    }
+    .main-content {
+      margin-left: 120px; /* set the left margin equal to the width of the sidebar */
+      padding: 5px;
+      
+    }
+
+    .navbar {
+  border-bottom: 1px solid black;
+    }
+
+  .password{
+  margin-top: 60px;
+  }
+
+  .password-textbox-new{
+    margin-top: 10px;
+  }
+
+  .password-textbox-current{
+    margin-top: 10px;
+  }
+    
+
+  </style>
+</head>
+<body>
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <div class="container-fluid">
+      <img src="RECIPESEARCH icon.png" alt="logo" style="width:290px;height:45px;">
+      <div class="mx-auto" id="navbarNav">
+        <ul class="navbar-nav d-flex justify-content-center">
+          
+        </ul>
+      </div>
+    </div>
+  </nav>  
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3 sidebar">
+        
+        <ul class="list-unstyled">
+            <a href="changeusername.html" class="list-group-item list-group-item-action">Change Username/Password</a>
+          <a href="email.html" class="list-group-item list-group-item-action">Email</a>
+          <a href="other.html" class="list-group-item list-group-item-action">Other</a>
+          <a href="#" class="list-group-item list-group-item-action">My Profile</a>
+        </ul>
+      </div>
+      <div class="main">
+      <div class="col-md-9 main-content">
+        <div class="col-md-9 main-content">
+            <h3>Change Your Email</h3>
+            <p>Please enter your new username below:</p>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              </div>
+              <button type="button" class="btn btn-success">Save</button>
+              <div class="password">
+            <h3>Change Your Password</h3>
+              <div class="row g-3 align-items-center">
+                <div class="password-textbox-current">
+
+                  <div class="col-auto">
+                  <label for="inputPassword6" class="col-form-label">Current Password</label>
+                </div>
+                <div class="col-auto">
+                  <input type="password" id="inputPassword6" class="form-control" aria-labelledby="passwordHelpInline">
+                </div>
+                </div>
+              </div>
+              <div class="row g-3 align-items-center">
+                <div class="password-textbox-new">
+                  <div class="col-auto">
+                  <label for="inputPassword6" class="col-form-label">New Password</label>
+                </div>
+                <div class="col-auto">
+                  <input type="password" id="inputPassword6" class="form-control" aria-labelledby="passwordHelpInline">
+                </div>
+                </div>
+                <div class="col-auto">
+                  <span id="passwordHelpInline" class="form-text">
+                    Must be 8-20 characters long.
+                  </span>
+                </div>
+              </div>
+                <button type="button" class="btn btn-success">Save</button>
+            </div>    
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.0/js/bootstrap.bundle.min.js">
+
+
+  </script>
+</body>
+</html>
