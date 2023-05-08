@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecipeSearch - Terms of Service</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        .li-dec
+        {
+            list-style-type: decimal;
+        }
+        .li-dot
+        {
+            list-style-type: disc;
+        }
+    </style>
+
+</head>
+<body>
+        <div class="hero">
+        <div class="sidebar" id="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">About Us</a>
+            <a href="#">My Profile</a>
+            <a href="#">Search</a>
+            <a href="#">Contact Us</a>
+            <a href="#">FAQ</a>
+        </div>
+        
+        <nav>
+            <img src="Images/RECIPESEARCH icon.png" class="logo" style="width:290px;height:45px;">
+            
+
+            <ul>
+                <li><a href="#" class="aboutus">ABOUT</a></li>
+                <li><a href="#" class="contactus">CONTACT US</a></li>
+                <button type="button" class="login btn btn-success">Login</button>
+                <img src="Images/search-icon.png" alt="" width="40" height="40" class="search-icon">
+                
+                
+                <button class="sidebar-toggle" onclick="openNav()">&#9776;</button>
+                <a href="#menu" id="toggle"><span></span></a>
+
+            
+            </ul>
+        </nav>
+
+        <h1>RecipeSearch Terms of Service</h1>
+
+        The RecipeSearch Terms of Service ("Terms of Service") is a legal agreement between you ("you") and the RecipeSearch developers and admins ("we", "us", "our") governing your use and access of the RecipeSearch services ("RecipeSearch", "the service"). By creating an account with RecipeSearch you indicate that you have read, understood and agree to be bound by these terms.
+        <br><br>
+
+        <h2>Privacy Practices</h2>
+        RecipeSearch collects and stores information about registered users as governed by the <a href="privacy.html">RecipeSearch Privacy Policy</a> <!--TODO: Write Privacy Policy-->
+        <br><br>
+
+        <h2>Limitation of Liability</h2>
+        Use of RecipeSearch is at your own risk. We shall not be liable for any damages or losses incurred from the use of the service. We shall not be held responsible for any errors or omissions in the content of the service or any damages arising from the use of the service.
+        <br><br>
+
+        In no event shall we be liable to you for any damages or losses, including without limitation, lost profits, lost data, or any other damages arising out of or in connection with the use of the service.
+        <br><br>
+
+        <h2>Intellectual Property</h2>
+        All original content provided by RecipeSearch, including but not limited to text, graphics, logos, images and software, is our intellectual property and is propected by applicable laws governing copyright, trademark, patent and other proprietary rights.
+        <br><br>
+
+        Recipe information provided by the service is not owned by us, but is instead the property of their respective owners. We do not claim ownership or rights to use any information provided by the service.
+        <br><br>
+
+        <h2>Expectations for Users</h2>
+        As a user of the service, you are expected to adhere to the following rules:
+
+        <ul>
+            <li class="li-dot">You must not use RecipeSearch to spread hate or negativity</li>
+            <li class="li-dot">Recipe reviews posted on RecipeSearch must be related to the recipe itself</li>
+        </ul>
+        <br>
+        <h2>Termination of contract</h2>
+        We reserve the right to terminate your agreement at any time under one or more of the following conditions:
+
+        <ol>
+            <li class="li-dec">You are in breach of these terms</li>
+            <li class="li-dec">We think that your actions through the service might be harmful to us or other users.</li>
+            <li class="li-dec">You have not accessed the service in at least 18 months.</li>
+        </ol>
+
+        If you wish to terminate your agreement, you may either delete your account with the service or stop using the service. Account data will be removed in line with the <a href="privacy.html">Privacy Practices</a>
+        <br><br>
+
+        <h2>Revising these Terms of Service</h2>
+        These Terms of Service may be revised in the future. Changes will not be retroactive, only the most recent version of the Terms of Service will apply.
+        <br>
+        All changes to these Terms of Service will be communicated to the user through official channels before the changes come into effect.
+        <br><br>
+
+        <h2>Questions or Concerns</h2>
+        If you have any questions regarding this agreement, we can be contacted through the <a href="https://github.com/Samuels-Account/Recipe-Search">GitHub repository</a>
+    
+         <script>
+        function openNav() {
+            document.getElementById("sidebar").style.width = "250px";
+            document.getElementById("hero").style.marginLeft = "250px";
+        }
+    
+        function closeNav() {
+            document.getElementById("sidebar").style.width = "0";
+            document.getElementById("hero").style.marginLeft = "0";
+        }
+        </script>
+</body>
+</html>
