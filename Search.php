@@ -18,14 +18,7 @@ function allOutputs($recipeName,$ingredients)
         design($recipeName[$x], $ingredients[$x]);//something wrong
     }
 }
-
-
-
 ?>
-
-
-
-
 
 <html>
 <head><title>Recipe Search - Search</title></head>
