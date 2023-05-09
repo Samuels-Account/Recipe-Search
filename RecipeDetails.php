@@ -7,9 +7,9 @@
     //parsed information from previous page will allow us to obtain data
     //from database
     $recipe = $_POST["//the paragraph(s) explaining how to make the food"];
-    $recipeName = $_POST["//the name from the previos page"];
+    $recipeName = $_POST["//the name from the previos page"];// the name from the previous page that will allow us what to identify what we need from the database
 
-    function validate()
+    function obtain()//validates if the connection works and obtains the necessary values from the database
     {
         $servername = "localhost";
         $username = "username";
@@ -24,7 +24,7 @@
         $ingredients = ""; //maybe a list or string split method my be necessary
         $conn->close();//closes connection
     }
-
+        obtain();
     ?>
 
 <html>
