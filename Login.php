@@ -13,7 +13,7 @@ else
 }
 
 //database connection
-function validate()
+function validate()//will determine if the value from the user can be used by checking the database
 {
     $servername = "localhost";
     $username = "username";
@@ -32,10 +32,10 @@ function validate()
         if($value["password"] == $_POST["password"] && $value["username"] == $_POST["userName"])
         {
             echo "User Found.";
-            $conn->close();
+            $conn->close();//closes the connection
             return true;
         }
-        $conn->close();
+        $conn->close();//closes the connection
         return false;
     }
 }
@@ -44,7 +44,7 @@ function validate()
 
 <html>
 
-<style>
+<style>// the formatting of the UI
 form
 {
   margin-left: 30em;
@@ -60,10 +60,13 @@ form
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
   <script src="homepage.js"></script>
+    <head> //the title that will appear in the nav bar of the browser
+    <title>Recipe Search - Login</title>
+</head>
 
 
 </head>
-<body>
+<body>//proceeding code is the side bar for the page
       <div class="hero">
       <div class="sidebar" id="sidebar">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -89,14 +92,14 @@ form
 
       <form action="Login.php" method="post">
         <h1>Login</h1>
-    <p><b>Please enter your Username:</b><br>
+    <p><b>Please enter your Username:</b><br>//user enters name
     <input type="text" name="username"><br>
-    <b>Please enter your Password:</b><br>
+    <b>Please enter your Password:</b><br>//user enters password
     <input type="text" name="password"><br>
     <input type="submit"></p>   
        </form>
 
-      <div class="footer" style="background-color: #f0f0f0;">
+      <div class="footer" style="background-color: #f0f0f0;">//proceeding code is for the footer of the page
         <div class="footer_menu">
           <div class="col_1">
             <ul>
@@ -121,7 +124,4 @@ form
         </div>
       </div>
 
-<head>   
-    <title>Recipe Search - Login</title>
-</head>
 </html>
