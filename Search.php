@@ -1,20 +1,20 @@
 <?php
-$recipeName = array("also","dummy","data","crazy");
-$ingredients = array("this","is","not","real");
+$recipeName = array("also","dummy","data","crazy");//dummy data that represents the imput from the database
+$ingredients = array("this","is","not","real");//same as above
 //ingredients needs to be a list of arrays/lists.
 
 function design($recipeName, $ingredients)
 {
-    echo "<dt><h3>$recipeName</h3></dt>";
+    echo "<dt><h3>$recipeName</h3></dt>";//name from database
     foreach($ingredients as $value)
     {
-        echo "<dd>$value</dd>";
+        echo "<dd>$value</dd>";//one of the incredients from thedatabase
     }
     echo "<br>";
 }
-function allOutputs($recipeName,$ingredients)
+function allOutputs($recipeName,$ingredients)//produces the output from the database. 20 different recipes
 {
-    for($x = 0; $x <= 3; $x++)
+    for($x = 0; $x <= 20; $x++)
     {
         design($recipeName[$x], $ingredients[$x]);
     }
@@ -22,7 +22,7 @@ function allOutputs($recipeName,$ingredients)
 ?>
 
 <html>
-<head><title>Recipe Search - Search</title></head>
+<head><title>Recipe Search - Search</title></head>//the title that will appear in the nav bar of the web browser in use
 
 
 <head>
@@ -35,7 +35,7 @@ function allOutputs($recipeName,$ingredients)
 
 
 </head>
-<body>
+<body>//proceeding code is the code relevant for the nav bar to work
       <div class="hero">
       <div class="sidebar" id="sidebar">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -61,10 +61,10 @@ function allOutputs($recipeName,$ingredients)
     <h1>
         Search for your Recipes
     </h1>
-        <?php allOutputs($recipeName,$ingredients); ?>
+        <?php allOutputs($recipeName,$ingredients); ?>//where the output will be displayed
     </form>
           
-      <div class="footer" style="background-color: #f0f0f0;">
+      <div class="footer" style="background-color: #f0f0f0;"> // the proceeding code is the code that makes up the footer of this web page.
         <div class="footer_menu">
           <div class="col_1">
             <ul>
