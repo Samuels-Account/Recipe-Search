@@ -1,5 +1,4 @@
 <?php
-
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
 if(validate() == true)
@@ -11,7 +10,6 @@ else
 {
     echo 'Username or Password doesn\'t match.' ;
 }
-
 }
 
 //database connection
@@ -61,7 +59,8 @@ form
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
-  <script src="bar.js"></script>
+  <script src="homepage.js"></script>
+
 
 </head>
 <body>
@@ -86,6 +85,8 @@ form
           </ul>
       </nav>
 
+
+
       <form action="Login.php" method="post">
         <h1>Login</h1>
     <p><b>Please enter your Username:</b><br>
@@ -94,7 +95,6 @@ form
     <input type="text" name="password"><br>
     <input type="submit"></p>   
        </form>
-
 
       <div class="footer" style="background-color: #f0f0f0;">
         <div class="footer_menu">
