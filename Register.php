@@ -97,13 +97,13 @@
 <body>
       <div class="hero">
       <div class="sidebar" id="sidebar">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <a href="#">About Us</a>
-          <a href="#">My Profile</a>
-          <a href="#">Search</a>
-          <a href="#">Contact Us</a>
-          <a href="#">FAQ</a>
-      </div>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="about_us.html">About Us</a>
+            <a href="#">Search</a>
+            <a href="contact_us.html">Contact Us</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+        </div>
       <nav>
           <img src="Images/RECIPESEARCH icon.png" class="logo" style="width:290px;height:45px;">
           <ul>
