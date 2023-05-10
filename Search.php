@@ -1,28 +1,52 @@
 <?php
-$recipeName = array("also","dummy","data","crazy");//dummy data that represents the imput from the database
-$ingredients = array("this","is","not","real");//same as above
-//ingredients needs to be a list of arrays/lists.
+$recipeName = array();
+$description = array();
 
-function design($recipeName, $ingredients)
+
+function sqlStuff($recipeName,$description,$num)
+{
+  $servername = "localhost";
+    $username = "cg6cmf7_herb";
+    $password = "cuEXMVERHayi8UY";
+    $conn = new mysqli($servername, $username, $password);//Create 
+    $conn->query("USE cg6cmf7_RecipeSearch");
+    if ($conn->connect_error)//check
+    {
+        $conn->close();
+        return false;
+    }
+    $sql = "SELECT RecipeName, Desctiption,  FROM Recipes WHERE RecipeID = '$num';";
+    $result = $conn->query($sql);
+    while($value = $result->fetch_assoc())
+    {	
+      array_push($recipeName, $value["RecpieName"]);
+      array_push($description, $value["Description"]);
+    }
+    $conn->close();
+}
+
+
+function design($recipeName, $description)
 {
     echo "<dt><h3>$recipeName</h3></dt>";//name from database
-    foreach($ingredients as $value)
-    {
-        echo "<dd>$value</dd>";//one of the incredients from thedatabase
-    }
+
+        echo "<dd>$description</dd>";//the desription of the recipe.
+    
     echo "<br>";
 }
-function allOutputs($recipeName,$ingredients)//produces the output from the database. 20 different recipes
+function allOutputs($recipeName,$description)//produces the output from the database. 20 different recipes
 {
+
     for($x = 0; $x <= 20; $x++)
     {
-        design($recipeName[$x], $ingredients[$x]);
+      sqlStuff($recipeName,$description,$x);
+        design($recipeName[$x], $description[$x]);
     }
 }
 ?>
 
 <html>
-<head><title>Recipe Search - Search</title></head>//the title that will appear in the nav bar of the web browser in use
+<head><title>Recipe Search - Search</title></head>
 
 
 <head>
@@ -35,7 +59,7 @@ function allOutputs($recipeName,$ingredients)//produces the output from the data
 
 
 </head>
-<body>//proceeding code is the code relevant for the nav bar to work
+<body>
       <div class="hero">
       <div class="sidebar" id="sidebar">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -61,10 +85,10 @@ function allOutputs($recipeName,$ingredients)//produces the output from the data
     <h1>
         Search for your Recipes
     </h1>
-        <?php allOutputs($recipeName,$ingredients); ?>//where the output will be displayed
+        <?php allOutputs($recipeName,$ingredients); ?>
     </form>
           
-      <div class="footer" style="background-color: #f0f0f0;"> // the proceeding code is the code that makes up the footer of this web page.
+      <div class="footer" style="background-color: #f0f0f0;">  
         <div class="footer_menu">
           <div class="col_1">
             <ul>
