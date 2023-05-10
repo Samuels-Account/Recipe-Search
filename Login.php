@@ -1,4 +1,5 @@
 <?php
+
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {
 if(validate() == true)
@@ -10,41 +11,48 @@ else
 {
     echo 'Username or Password doesn\'t match.' ;
 }
+
 }
 
+
+
 //database connection
-function validate()//will determine if the value from the user can be used by checking the database
+function validate()
 {
     $servername = "localhost";
-    $username = "username";
-    $password = "password";
+    $username = "cg6cmf7_herb";
+    $password = "cuEXMVERHayi8UY";
     $conn = new mysqli($servername, $username, $password);//Create 
+    $conn->query("USE cg6cmf7_RecipeSearch");
     if ($conn->connect_error)//check
     {
         $conn->close();
         return false;
     }
-
-    $sql = "SELECT username, password, email FROM Users";//interchange names with correct values
+    $u5ername = $_POST["username"];
+    $sql = "SELECT * FROM Users WHERE UserName='$u5ername';";
     $result = $conn->query($sql);
-    foreach($result->fetch_assoc() as $value)
+   // if($result == false)
+   // {
+   //     return false;       
+    //}
+    while($value = $result->fetch_assoc())
     {			
-        if($value["password"] == $_POST["password"] && $value["username"] == $_POST["userName"])
+        if($value["Password"] == $_POST["password"])
         {
-            echo "User Found.";
-            $conn->close();//closes the connection
+            $conn->close();
             return true;
         }
-        $conn->close();//closes the connection
-        return false;
+        $conn->close();
     }
+    return false;
 }
 
 ?>
 
 <html>
 
-<style>// the formatting of the UI
+<style>
 form
 {
   margin-left: 30em;
@@ -53,6 +61,9 @@ form
 }
 </style>
 
+
+
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -60,13 +71,10 @@ form
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
   <script src="homepage.js"></script>
-    <head> //the title that will appear in the nav bar of the browser
-    <title>Recipe Search - Login</title>
-</head>
 
 
 </head>
-<body>//proceeding code is the side bar for the page
+<body>
       <div class="hero">
       <div class="sidebar" id="sidebar">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -92,14 +100,14 @@ form
 
       <form action="Login.php" method="post">
         <h1>Login</h1>
-    <p><b>Please enter your Username:</b><br>//user enters name
+    <p><b>Please enter your Username:</b><br>
     <input type="text" name="username"><br>
-    <b>Please enter your Password:</b><br>//user enters password
+    <b>Please enter your Password:</b><br>
     <input type="text" name="password"><br>
     <input type="submit"></p>   
        </form>
 
-      <div class="footer" style="background-color: #f0f0f0;">//proceeding code is for the footer of the page
+      <div class="footer" style="background-color: #f0f0f0;">
         <div class="footer_menu">
           <div class="col_1">
             <ul>
@@ -124,4 +132,11 @@ form
         </div>
       </div>
 
+
+
+
+
+<head>   
+    <title>Recipe Search - Login</title>
+</head>
 </html>
