@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Settings Page</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.0/css/bootstrap.min.css">
   <style>
     body {
-      padding-top: 60px; /* set the top padding equal to the height of the navbar */
-      
+      padding-top: 60px;
+      /* set the top padding equal to the height of the navbar */
+
     }
+
     .sidebar {
       position: fixed;
-      top: 60px; /* set the top position equal to the height of the navbar */
+      top: 60px;
+      /* set the top position equal to the height of the navbar */
       left: 0;
       width: 250px;
       height: 100%;
@@ -20,22 +24,26 @@
       border: 1px solid black;
 
     }
+
     .main-content {
-      margin-left: 250px; /* set the left margin equal to the width of the sidebar */
+      margin-left: 250px;
+      /* set the left margin equal to the width of the sidebar */
       padding: 15px;
-      
+
     }
 
     .navbar {
-  border-bottom: 1px solid black;
-}
+      border-bottom: 1px solid black;
+    }
   </style>
 </head>
+
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
     <div class="container-fluid">
-      <img src="RECIPESEARCH icon.png" alt="logo" style="width:290px;height:45px;">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <a href="homepage.html"><img src="RECIPESEARCH icon.png" class="logo" style="width:290px;height:45px;"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -56,9 +64,9 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-3 sidebar">
-        
+
         <ul class="list-unstyled">
-            <a href="changeusername.html" class="list-group-item list-group-item-action">Change Username/Password</a>
+          <a href="changeusername.html" class="list-group-item list-group-item-action">Change Username/Password</a>
           <a href="email.html" class="list-group-item list-group-item-action">Email</a>
           <a href="other.html" class="list-group-item list-group-item-action">Other</a>
         </ul>
@@ -71,4 +79,5 @@
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.0/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

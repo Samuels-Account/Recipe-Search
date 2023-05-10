@@ -52,7 +52,7 @@ nav {
   text-decoration: none;
   font-weight: bold;
   margin-top: 1%;
-  
+
 }
 
 .contactus {
@@ -62,7 +62,7 @@ nav {
   text-decoration: none;
   color: #000000;
   margin-top: 1%;
-  
+
 }
 
 .login {
@@ -183,41 +183,41 @@ nav {
 
 @media (max-width:768px) {
   .wrapper .navbar .logo {
-      font-size: 20px;
+    font-size: 20px;
   }
 
   .main_container {
-      padding: 25px;
+    padding: 25px;
   }
 
   .main_container .item {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .main_container .item .img_holder {
-      max-width: 750px;
-      width: 100%;
+    max-width: 750px;
+    width: 100%;
   }
 
   .main_container .item .item_info {
-      margin-left: 0;
-      width: 100%;
-      margin-top: 10px;
-      text-align: center;
+    margin-left: 0;
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
   }
 
   .footer .footer_menu {
-      flex-direction: column;
-      width: 220px;
-      margin: 0 auto 25px;
+    flex-direction: column;
+    width: 220px;
+    margin: 0 auto 25px;
   }
 
   .footer .footer_menu>div {
-      margin: 10px 0;
+    margin: 10px 0;
   }
 
   .footer .partners ul li a {
-      margin: 5px;
+    margin: 5px;
   }
 }
 
@@ -267,11 +267,11 @@ nav {
 
 @media screen and (max-height: 450px) {
   .sidebar {
-      padding-top: 15px;
+    padding-top: 15px;
   }
 
   .sidebar a {
-      font-size: 18px;
+    font-size: 18px;
   }
 }
 
@@ -297,6 +297,3 @@ nav {
   margin-top: 1%;
   text-align: center;
 }
-
-
-
