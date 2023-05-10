@@ -1,34 +1,34 @@
-<?php
-    
-    //import css
-    
+<?php   
     //import database information
     
     //parsed information from previous page will allow us to obtain data
     //from database
-    $recipe = $_POST["//the paragraph(s) explaining how to make the food"];
-    $recipeName = $_POST["//the name from the previos page"];// the name from the previous page that will allow us what to identify what we need from the database
+    $recipeName = $_POST["the name of the recipe from search"];//this could also be reciped id
 
-    function obtain()//validates if the connection works and obtains the necessary values from the database
-    {
-        $servername = "localhost";
-        $username = "username";
-        $password = "password";
-        $conn = new mysqli($servername, $username, $password);//Create 
-        if ($conn->connect_error)//check
-        {
-            $conn->close();//end
-            return false;
-        }
-        $recipe =  "";//sql code to obtain the necessary values
-        $ingredients = ""; //maybe a list or string split method my be necessary
-        $conn->close();//closes connection
-    }
-        obtain();
+      $servername = "localhost";
+      $username = "cg6cmf7_herb";
+      $password = "cuEXMVERHayi8UY";
+      $conn = new mysqli($servername, $username, $password);//Create 
+      $conn->query("USE cg6cmf7_RecipeSearch");
+      if ($conn->connect_error)//check
+      {
+          $conn->close();
+          return false;
+      }
+      $sql = "SELECT * FROM Recipes WHERE RecipeName = '$recipeName';";
+      $result = $conn->query($sql);
+      $value = $result->fetch_assoc();
+        $Description =  $value["Description"];
+        $Serving = $value["Serving"];
+        $timing = $value["Time"];
+        $calories = $value["Calories"];     
+        $ingredients = $value["Ingredients"];
+        $method = $value["Method"];
+        $conn->close();
     ?>
 
 <html>
-    <head><title>Recipe Search - Details</title></head>//title displayed in the web browser
+    <head><title>Recipe Search - Details</title></head>
 
     <head>
   <meta charset="UTF-8">
@@ -39,7 +39,7 @@
   <script src="homepage.js"></script>
 
 </head>
-<body>//proceeding code is for thenavigation bar
+<body>
       <div class="hero">
       <div class="sidebar" id="sidebar">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -60,24 +60,20 @@
               <a href="#menu" id="toggle"><span></span></a>
           </ul>
       </nav>
-          
-      <h1><?php $recipeName ?></h1>//the name of the recipe
-    <h2>Ingredients</h2>//ingredients listed out
+
+      <h1><?php $recipeName ?></h1>
+      <p>$Description</p><br><p>$Serving - $timing - $calories</p>
+    <h2>Ingredients</h2>
         <ul>
-        //php method that runs through the ingredients and puts it into a
-        //list via 
+        $ingredients
         <li>          
         </li>
         </ul>
         <h2>Method</h2>
-        <p><?php $recipe ?></p>//recipe from the database
-        <h2>Reviews</h2>
-        <ul>
-        //php method that runs through all of the reviews for the recipe 
-    <li></li>
-    </ul>
+        <p><?php $method ?></p>
+     </ul>
 
-      <div class="footer" style="background-color: #f0f0f0;">//proceeding code is for the footer of the page
+      <div class="footer" style="background-color: #f0f0f0;">
         <div class="footer_menu">
           <div class="col_1">
             <ul>
