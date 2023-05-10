@@ -71,7 +71,8 @@
 			return false;
 		}
 		return $conn;
-	}  
+	}
+  
 ?>
 
 <style>
@@ -82,11 +83,7 @@
 
 	}
 </style>
-
-
 <html>
-
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -118,7 +115,7 @@
               <a href="#menu" id="toggle"><span></span></a>
           </ul>
       </nav>
-  
+	  
     	<form action="Register.php" method="post">
 		<h1>Register</h1>
     		<p>
@@ -149,7 +146,6 @@
     		</p>
      
     	</form>
-
       <div class="footer" style="background-color: #f0f0f0;">
         <div class="footer_menu">
           <div class="col_1">
@@ -174,5 +170,4 @@
           <p></p>
         </div>
       </div>
-
 </html>
