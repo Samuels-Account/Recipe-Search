@@ -1,4 +1,11 @@
 <?php
+
+
+
+
+
+
+
 function sqlStuff($sql,$recipeName,$description,$num)
 {
   echo $sql;
@@ -22,6 +29,7 @@ function sqlStuff($sql,$recipeName,$description,$num)
     }
     
 
+
     $result = $conn->query($sql);
     while($value = $result->fetch_assoc())
     {	
@@ -38,9 +46,10 @@ function sqlStuff($sql,$recipeName,$description,$num)
     $conn->close();
     echo "<h3>$recipeName</h3>";//name from database
     echo "$description <br>";//the desription of the recipe.
-    echo "<input type=\"submit\" id='recipe' value=\"$recipeName\">";
+    echo "<input type=\"submit\" id='recipe' name='transfer' value=\"$recipeName\">";
     echo "<br>";
 }
+
 
 function allOutputs($sql,$recipeName,$description)//produces the output from the database. 20 different recipes
 {
@@ -55,6 +64,7 @@ function allOutputs($sql,$recipeName,$description)//produces the output from the
 <html>
 <head><title>Recipe Search - Search</title></head>
 
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -62,6 +72,7 @@ function allOutputs($sql,$recipeName,$description)//produces the output from the
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
   <script src="homepage.js"></script>
+
 
 </head>
 <body>
@@ -85,7 +96,8 @@ function allOutputs($sql,$recipeName,$description)//produces the output from the
               <a href="#menu" id="toggle"><span></span></a>
           </ul>
       </nav>
-        
+
+
       <h1>
         Search for your Recipes
       </h1>
@@ -93,11 +105,24 @@ function allOutputs($sql,$recipeName,$description)//produces the output from the
     <h4>Search: <input type="text" name="searchbar">  <input type="submit"></h4>
     </form>
 
+
+
+
+
+
+
     <form action="RecipeDetails.php" method="post">
     <div>
         <?php allOutputs($sql,$recipeName,$description); ?>
     </div>
     </form>
+
+
+
+
+
+
+
 
       <div class="footer" style="background-color: #f0f0f0;">  
         <div class="footer_menu">
