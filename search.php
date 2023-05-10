@@ -54,7 +54,7 @@ function sqlStuff($sql,$recipeName,$description,$num)
 function allOutputs($sql,$recipeName,$description)//produces the output from the database. 20 different recipes
 {
 
-    for($x = 1; $x <= 20; $x++)
+    for($x = 0; $x <= 20; $x++)
     {
       sqlStuff($sql,$recipeName,$description,$x);
     }
