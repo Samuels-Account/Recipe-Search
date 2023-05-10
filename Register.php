@@ -8,16 +8,23 @@
 	if($_SERVER["REQUEST_METHOD"] == "POST")
 	{
 		$conn = openConnection();
-		if (validate($conn) == true)
+		$num=0;
+		if (validate($conn,$num) == true)
 		{
-			addToDB($conn);
+			addToDB($conn,$num);
 			$conn->close();
+			header("Location: Search.php");
+			die();
 		}
 	}
 
-    function addToDB($conn)
+    function addToDB($conn,$num)
     {
-		$sql = 'INSERT INTO Users (username, password, email) VALUES($_POST["userName"],$_POST["password"],$_POST["email"])';
+		$user = $_POST["userName"];
+		$pass = $_POST["password"];
+		$e = $_POST["email"];
+		$sql = "INSERT INTO Users (UserID, UserName, Password, Email) VALUES($num,'$user','$pass','$e')";
+		echo $sql;
 		if ($conn->query($sql) === TRUE) 
 		{
 			echo "New User added.";
@@ -28,41 +35,43 @@
 		}
     }
 
-	function validate($conn)
+	function validate($conn,$num)
 	{
-		$sql = "SELECT username, password, email FROM Users";//interchange names with correct values
+		$sql = "SELECT UserName, Password, Email FROM Users";//interchange names with correct values
 		$result = $conn->query($sql);
-		foreach($result->fetch_assoc() as $value)
-		{			
-			if($value["email"] == $_POST["email"])
+		while($value = $result->fetch_assoc())
+		{	
+			$num++;			
+			if($value["Email"] == $_POST["email"])
 			{
 				echo "This email is already in use.";
 				
 				return false;
 			}
-			elseif($value["username"] == $_POST["userName"])
+			elseif($value["UserName"] == $_POST["userName"])
 			{
 				echo "This username is in use.";
 				return false;
 			}
-			return true;
 		}
+		$num++;
+		return true;
 	}
 
 	function openConnection()
 	{
 		$servername = "localhost";
-		$username = "username";
-		$password = "password";
-				
+		$username = "cg6cmf7_herb";
+		$password = "cuEXMVERHayi8UY";
 		$conn = new mysqli($servername, $username, $password);//Create 
+		$conn->query("USE cg6cmf7_RecipeSearch");
 		if ($conn->connect_error)//check
 		{
-		  die("Connection failed: " . $conn->connect_error);
+			$conn->close();
+			return false;
 		}
 		return $conn;
-	}
-  
+	}  
 ?>
 
 <style>
@@ -109,7 +118,7 @@
               <a href="#menu" id="toggle"><span></span></a>
           </ul>
       </nav>
-	  
+  
     	<form action="Register.php" method="post">
 		<h1>Register</h1>
     		<p>
