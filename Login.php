@@ -4,7 +4,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 {
 if(validate() == true)
 {
-    header("Location: Search.php");
+    header("Location: profile.html");
     die();
 }
 else
