@@ -14,8 +14,6 @@ else
 
 }
 
-
-
 //database connection
 function validate()
 {
@@ -61,9 +59,6 @@ form
 }
 </style>
 
-
-
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -95,8 +90,6 @@ form
               <a href="#menu" id="toggle"><span></span></a>
           </ul>
       </nav>
-
-
 
       <form action="Login.php" method="post">
         <h1>Login</h1>
@@ -131,10 +124,6 @@ form
           <p></p>
         </div>
       </div>
-
-
-
-
 
 <head>   
     <title>Recipe Search - Login</title>
